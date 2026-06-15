@@ -1,0 +1,19 @@
+[Unit]
+Description=ABIR X6 robot control bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/abir-x6-bridge.env
+ExecStart=/usr/bin/python3 /opt/abir-x6-bridge/robot_control_bridge.py
+Restart=on-failure
+RestartSec=5
+User=abir-bridge
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
