@@ -1,0 +1,36 @@
+name: ABIR X6 compatibility report
+description: Report another firmware, command issue, or setup result
+title: "[Report] "
+labels: ["compatibility"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not post passwords, API tokens, email addresses, public IPs, Wi-Fi credentials, or the robot thing_name."
+  - type: input
+    id: model
+    attributes:
+      label: Robot model and firmware
+      placeholder: "ABIR X6, firmware 3.6.8"
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What are you testing?
+      options:
+        - WeBack offline / rebinding
+        - Bridge installation
+        - Cleaning command
+        - Return to dock
+        - Deep sleep / wake-up
+        - Map or history
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result and sanitized logs
+      description: Remove all credentials and unique identifiers before posting.
+    validations:
+      required: true
