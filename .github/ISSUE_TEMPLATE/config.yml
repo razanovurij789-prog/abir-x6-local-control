@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and user reports
+    url: https://github.com/razanovurij789-prog/abir-x6-local-control/discussions/1
+    about: Ask questions and share results without exposing credentials.
